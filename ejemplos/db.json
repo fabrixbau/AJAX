@@ -4,6 +4,21 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "title": "post correcto",
+      "author": "fabrixBau",
+      "id": 2
+    },
+    {
+      "title": "ahora si salio el post",
+      "author": "fabrixBAu",
+      "id": 3
+    },
+    {
+      "title": "ahora si lo bueno de post",
+      "author": "fabrixBau",
+      "id": 4
     }
   ],
   "comments": [

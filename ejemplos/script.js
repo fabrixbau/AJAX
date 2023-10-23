@@ -105,11 +105,11 @@ btnCreate.addEventListener("click", async () => {
     }
 
     const myHeaders = new Headers() //los headers son para poder crear la peticion post
-    myHeaders.append('Content-Type', 'application/json')
+    myHeaders.append('Content-Type', 'application/json');
     myHeaders.append("Authorization", "el-token-super-seguro"); //Aquí iría el token en caso de ocuparlo
 
     const myInit ={
-        metho: "POST",
+        method: "POST",
         body: JSON.stringify(post),
         headers: myHeaders
     }
@@ -121,7 +121,7 @@ btnCreate.addEventListener("click", async () => {
             return
         }
 
-        const data = response.json()
+        const data = await response.json()
         console.log("Recurso creado correctamente!", data)
     }catch(err){
         console.log("Ooops, hubo un error", err)
