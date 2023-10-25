@@ -3,6 +3,7 @@ const title = document.getElementById("title")
 const author = document.getElementById("author")
 const btnSave = document.getElementById("btnSave")
 
+
 myForm.addEventListener("submit", e => {
     e.preventDefault()
 })
@@ -44,6 +45,7 @@ axios.get("http://localhost:3000")
 
 */
 
+
 /* 
 
 *** Esta es la forma en le que se pueden hacer 
@@ -56,3 +58,33 @@ axios({
 })
 .then(response => console.log(response))
 .catch(error => console.log(error)) */
+
+
+
+/*  
+
+   *** PARA MANEJAR ERRORES ES EL SIGUIENTE MÉTODO *** 
+
+btnSave.addEventListener("click", async () => {
+    const data = makePost()
+    try{
+        const response = await axios ({
+            method: "post",
+            url: "http://localhost:3000/posts/eror",
+            data: data,
+            validateStatus: function (status) {
+                return status >= 200 && status < 500
+            },
+        })
+        if (response.status === 400) {
+            console.log("Pagina no encontrada", response)
+            return
+        }
+        console.log(response)
+        }catch (error){
+            console.log(error)
+        }
+}) 
+
+*/
+    
